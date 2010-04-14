@@ -322,7 +322,7 @@ obsolete_1(regexp, _, _) ->
     {deprecated, "the regexp module is deprecated (will be removed in R15A); use the re module instead"};
 
 obsolete_1(lists, flat_length, 1) ->
-    {deprecated,{lists,flatlength,1},"R14"};
+    {removed,{lists,flatlength,1},"R14"};
 
 obsolete_1(ssh_sftp, connect, A) when 1 =< A, A =< 3 ->
     {deprecated,{ssh_sftp,start_channel,A},"R14B"};
@@ -337,7 +337,7 @@ obsolete_1(ssl_pkix, decode_cert, A) when A =:= 1; A =:= 2 ->
 
 %% Added in R13B04.
 obsolete_1(erlang, concat_binary, 1) ->
-    {deprecated,{erlang,list_to_binary,1},"R14B"};
+    {deprecated,{erlang,list_to_binary,1},"R15B"};
     
 obsolete_1(_, _, _) ->
     no.
